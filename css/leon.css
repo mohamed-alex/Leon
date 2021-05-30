@@ -1,0 +1,125 @@
+/*start global variables */
+:root {
+  --mainColor: #10cab7;
+}
+/* end global variables */
+/* start global rules */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+/* start global rules */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end of global rules */
+/* start of header */
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container img {
+  width: 60px;
+}
+.header .container .links {
+  position: relative;
+}
+.header .container .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  transition: all 0.5s;
+}
+.header .container .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2px;
+}
+.header .container .links .icon span:first-child {
+  width: 100%;
+}
+.header .container .links .icon span:nth-child(2) {
+  width: 60%;
+  transition: all 1s;
+}
+.header .container .links .icon span:last-child {
+  width: 100%;
+}
+.header .container .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .container .links:hover .icon {
+  transform: rotate(-90deg) scale(1.3);
+}
+
+.header .container .links:hover ul {
+  display: block;
+}
+.header .container .links ul {
+  position: absolute;
+  top: 28px;
+  right: 0;
+  list-style: none;
+  margin: 0px;
+  background-color: #f6f6f6;
+  padding: 0;
+  width: 200px;
+  display: none;
+}
+.header .container .links ul::before {
+  content: "";
+  top: -20px;
+  right: 5px;
+  position: absolute;
+  border-bottom: 10px solid #f6f6f6;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.header .container .links ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  transition: all 0.5s;
+}
+.header .container .links ul li {
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.header .container .links ul li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+.header .container .links ul li a:hover {
+  transform: translateX(10px);
+  padding-left: 15px;
+}
+
+/* end of header */
